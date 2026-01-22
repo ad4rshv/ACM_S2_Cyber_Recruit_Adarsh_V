@@ -1,152 +1,55 @@
-Interactive Cyber Incident Response Simulation
+Problem Description:
 
-ACM Recruitment Task Write-Up
+-The main objective of this task was not just to run the given application, but to understand how it works and how cybersecurity concepts are applied in a practical way. The task encouraged me to think about the   flow of a cyber incident and the reasoning behind each action, rather than only focusing on the final result.
+-The application simulates a cyber security incident and guides the user through different stages, helping convert theory into a simple interactive experience.
 
-📌 Introduction
+Purpose of the Application
 
-This task was given as part of the ACM recruitment process.
-The objective was not only to run the given application, but to understand how it works, analyze its design, and reason about cybersecurity concepts used inside it.
+-The purpose of this application is to help non-technical users understand how a cyber incident usually happens and how it should be handled.
+Instead of directly explaining concepts, the application:
+*Shows alerts
+*Asks quiz questions
+*Lets users take decisions
+*Scores answers based on response
+*This makes learning more engaging and realistic compared to traditional learning methods.
 
-The application is a Flask-based interactive simulation that walks a user through different stages of a cyber security incident, from detecting something suspicious to preventing it from happening again.
+How the Application Works
 
-The task helped me understand how theory concepts can be converted into a simple and interactive system.
+The application moves through different stages of a cyber incident, such as detecting suspicious activity, controlling damage, cleanup, and prevention. Each stage must be completed before moving to the next, which shows that incident response follows a proper order.
 
-🎯 Purpose of the Application
+The quiz format forces the persion to think logically and act like they are handling a real situation.
 
-The main goal of this application is to teach non-technical users how a cyber incident usually unfolds.
+My Quiz Performance:
 
-Instead of directly explaining concepts, the app:
+-I completed the quiz in 12.93 minutes, which shows active involvement without rushing.
+ My final score was 70 out of 100, with the following breakdown:
+*Correct instincts: 30 points
+*Right decisions: 30 points
+*Explanation: 10 points
 
-Shows alerts
+The MCQ questions was easy to understand. The explanation questions made me think more deeply, but due to basic keyword-based evaluation, some answers did not get full marks even though the logic was correct. This helped me understand the limitation of automated scoring systems.
 
-Asks questions
+Overall, the quiz felt more like a real decision-making exercise than a normal test.
 
-Lets users make decisions
+Observed Limitations:
 
-Scores them based on instincts and reasoning
+-While analyzing the application, I noticed a few limitations:
+*Some sensitive values are hardcoded
+*Data resets on restart
+*Explanation scoring is basic
+*Debug mode is enabled
+*These are acceptable for a learning simulation but not ideal for real-world use.
 
-This makes learning more engaging and realistic.
+I Learned:
 
-🧩 How the Application Works
+From this task, I learned:
+*How cyber incidents follow a step-by-step response flow
+*Why sessions are needed due to HTTP being stateless
+*How automated systems evaluate user responses
+*The importance of understanding how a system works, not just using it
+*This task helped me think more like an engineer instead of only focusing on getting correct answers.
 
-The application is built using Flask and uses multiple routes to control the flow.
+Conclusion:
+-Overall, this task was a good learning experience that combined logical thinking with basic technical understanding. The quiz-based approach made cybersecurity concepts easier to understand and more engaging. It  showed how complex ideas can be simplified without losing their core meaning.
 
-🔹 Starting Point (/)
 
-When the user opens the application, the index page is loaded.
-At this point:
-
-A session is started
-
-The timer begins
-
-Scores are initialized
-
-The user is redirected to the first stage
-
-🔹 Stage System (/stage/<id>)
-
-Each stage represents a phase of a cyber incident, such as:
-
-Suspicious login
-
-Data access
-
-Damage control
-
-Cleanup
-
-Prevention
-
-Each stage contains:
-
-An alert message
-
-One or more questions (MCQ or text)
-
-Expected answers for scoring
-
-The user must complete one stage before moving to the next, so skipping stages is not possible.
-
-🔹 Scoring Mechanism
-
-The scoring is divided into three parts:
-
-Correct instincts (40 points)
-
-Right decisions (40 points)
-
-Explanation (20 points)
-
-MCQ answers are easier to score accurately, while text answers are evaluated using simple keyword matching.
-
-Because of this, sometimes even correct explanations may not receive full points, which is a limitation of the current logic.
-
-📊 Result Analysis
-
-After completing all stages, the results page shows:
-
-Time taken
-
-Individual score breakdown
-
-Total score out of 100
-
-The final section maps the actions to Incident Response Lifecycle phases, such as:
-
-Detection
-
-Containment
-
-Eradication
-
-Recovery
-
-Lessons Learned
-
-This helped connect practical actions to real cybersecurity frameworks.
-
-⚠️ Observed Limitations
-
-While analyzing the application, I noticed some limitations:
-
-The Flask secret key is hardcoded
-
-Global statistics are stored in memory and reset on restart
-
-Text-based scoring is very basic
-
-Debug mode should not be enabled in production
-
-No input sanitization for text responses
-
-These are acceptable for a learning simulation but would need improvement in a real-world system.
-
-🔧 Possible Improvements
-
-If I were to extend this task further, I would:
-
-Improve explanation scoring using keyword lists
-
-Store statistics in a database instead of memory
-
-Use environment variables for secrets
-
-Add feedback after each stage to help learning
-
-What I Learned From This Task
-
-Through this task, I learned:
-How Flask handles routing and sessions
-Why HTTP being stateless makes sessions necessary
-How cyber incidents follow a step-by-step response flow
-How system limitations can affect automated evaluation
-How to analyze code instead of just running it
-This task helped me think more like an engineer rather than only focusing on output.
-
-Conclusion
-
-Overall, this task was a good mix of technical understanding and logical reasoning.
-It was less about writing large amounts of code and more about understanding why things work the way they do.
-
-This experience also showed how cybersecurity concepts can be simplified without losing their core meaning.
